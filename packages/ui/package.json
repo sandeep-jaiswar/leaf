@@ -3,30 +3,38 @@
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js"
+    "./styles.css": "./dist/index.css",
+    "./*": {
+      "types": "./src/*.tsx",
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.js"
     }
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "check-types": "tsc --noEmit",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo node_modules dist"
   },
   "devDependencies": {
-    "@sandeep-jaiswar/eslint-config": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
-    "@sandeep-jaiswar/typescript-config": "workspace:*",
     "tsup": "^8.0.2",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "postcss": "^8.5.3"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "@sandeep-jaiswar/eslint-config": "workspace:*",
+    "@sandeep-jaiswar/tailwind-config": "workspace:*",
+    "@sandeep-jaiswar/typescript-config": "workspace:*",
+    "tailwindcss": "^3.4.17"
   },
   "publishConfig": {
     "access": "public"
