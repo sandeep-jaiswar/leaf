@@ -1,4 +1,4 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["@leaf/eslint-config/storybook.js"],
+  extends: ["@sandeep-jaiswar/eslint-config/storybook.js"],
 };

@@ -19,7 +19,7 @@ importers:
 
   apps/docs:
     dependencies:
-      "@leaf/ui":
+      "@sandeep-jaiswar/ui":
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -29,10 +29,10 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      "@leaf/eslint-config":
+      "@sandeep-jaiswar/eslint-config":
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      "@leaf/typescript-config":
+      "@sandeep-jaiswar/typescript-config":
         specifier: workspace:*
         version: link:../../packages/typescript-config
       "@storybook/addon-actions":
@@ -95,10 +95,10 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1
     devDependencies:
-      "@leaf/eslint-config":
+      "@sandeep-jaiswar/eslint-config":
         specifier: workspace:*
         version: link:../eslint-config
-      "@leaf/typescript-config":
+      "@sandeep-jaiswar/typescript-config":
         specifier: workspace:*
         version: link:../typescript-config
       "@types/react":

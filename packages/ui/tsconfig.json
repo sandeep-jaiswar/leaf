@@ -1,5 +1,5 @@
 {
-  "extends": "@leaf/typescript-config/react-library.json",
+  "extends": "@sandeep-jaiswar/typescript-config/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
