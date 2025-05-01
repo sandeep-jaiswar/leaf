@@ -9,14 +9,14 @@
   "exports": {
     "./styles.css": "./dist/index.css",
     "./*": {
-      "types": "./src/*.tsx",
+      "types": "./dist/*.d.ts",
       "import": "./dist/*.mjs",
       "require": "./dist/*.js"
     }
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "build": "tsup & tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "dev": "tsup & tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "check-types": "tsc --noEmit",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo node_modules dist"
