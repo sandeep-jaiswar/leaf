@@ -1,18 +1,18 @@
-import { addons } from '@storybook/manager-api';
+import { addons } from "@storybook/manager-api";
 
 addons.setConfig({
   navSize: 300,
   bottomPanelHeight: 300,
   rightPanelWidth: 300,
-  panelPosition: 'bottom',
+  panelPosition: "bottom",
   enableShortcuts: true,
   showToolbar: true,
   theme: undefined,
   selectedPanel: undefined,
-  initialActive: 'sidebar',
+  initialActive: "sidebar",
   sidebar: {
     showRoots: false,
-    collapsedRoots: ['other'],
+    collapsedRoots: ["other"],
   },
   toolbar: {
     title: { hidden: false },
